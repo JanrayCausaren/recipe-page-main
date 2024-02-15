@@ -1,0 +1,139 @@
+:root {
+
+    --primary-nutmeg: hsl(14, 45%, 36%);
+    --primary-dark-rapsberry: hsl(332, 51%, 32%);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-rose-white: hsl(330, 100%, 98%);
+    --neutral-eggshell: hsl(30, 54%, 90%);
+    --neutral-light-grey: hsl(30, 18%, 87%);
+    --neutral-wenge-brown: hsl(30, 10%, 34%);
+    --neutral-dark-charcoal: hsl(24, 5%, 18%);
+
+    --font-family-outfit: "Outfit", sans-serif;
+    --font-family-young: "Young Serif", serif;
+
+    --font-weight-400: 400;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+
+    --fs-xL: clamp(2.5rem, 2.147887323943662rem + 1.5023474178403755vw, 3.5rem);
+    /*40px, 56px*/
+    --fs-L: clamp(2rem, 1.823943661971831rem + 0.7511737089201878vw, 2.5rem);
+    /*32px, 40px*/
+    --fs-m: clamp(1.5rem, 1.323943661971831rem + 0.7511737089201878vw, 2rem);
+    /*24, 32px*/
+    /* 
+ Mobile: 375px
+Desktop: 1440px */
+}
+
+*,
+*::before,
+::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    font-family: var(--font-family-outfit);
+    background-color: var(--neutral-eggshell);
+    color: var(--neutral-wenge-brown);
+}
+
+.container {
+    --max-width: 43.75rem;
+    width: min(var(--max-width), 100%);
+
+    margin-inline: auto;
+    background-color: var(--neutral-white);
+}
+
+
+h1 {
+    font-size: var(--fs-xL);
+    color: var(--neutral-dark-charcoal);
+}
+
+h2 {
+    font-size: var(--fs-L);
+    color: var(--primary-nutmeg);
+}
+
+h3 {
+    color: var(--primary-dark-rapsberry);
+    font-weight: var(--font-weight-600);
+}
+
+h1,
+h2 {
+    font-family: var(--font-family-young);
+}
+
+.preparation {
+    padding: 2rem;
+    background-color: var(--neutral-rose-white);
+    border-radius: 1rem;
+}
+
+ul,
+ol {
+    margin-left: 1rem;
+}
+
+.preparation ul li span,
+.instructions ol li span {
+    font-weight: var(--font-weight-600);
+}
+
+li::marker {
+    color: var(--primary-nutmeg);
+    font-weight: var(--font-weight-600);
+}
+
+@media (min-width: 43.75em) {
+    .container {
+        margin-block: 5rem;
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+    img{
+        border-radius: 1rem;
+    }
+}
+
+.break-line {
+    border-bottom: 1px solid var(--neutral-light-grey);
+}
+
+.wrapper {
+    padding-inline: 2rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
