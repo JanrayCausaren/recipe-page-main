@@ -17,7 +17,7 @@
     --font-weight-600: 600;
     --font-weight-700: 700;
 
-    --fs-xL: clamp(2.5rem, 2.147887323943662rem + 1.5023474178403755vw, 3.5rem);
+    --fs-xL: clamp(1.875rem, 1.6549295774647887rem + 0.9389671361502347vw, 2.5rem);
     /*40px, 56px*/
     --fs-L: clamp(2rem, 1.823943661971831rem + 0.7511737089201878vw, 2.5rem);
     /*32px, 40px*/
@@ -27,6 +27,7 @@
  Mobile: 375px
 Desktop: 1440px */
 }
+
 
 *,
 *::before,
@@ -71,11 +72,13 @@ body {
 h1 {
     font-size: var(--fs-xL);
     color: var(--neutral-dark-charcoal);
+    line-height: 2.25rem;
 }
 
 h2 {
     font-size: var(--fs-L);
     color: var(--primary-nutmeg);
+    line-height: 2.25rem;
 }
 
 h3 {
@@ -89,14 +92,34 @@ h2 {
 }
 
 .preparation {
-    padding: 2rem;
+    padding: 1.75rem;
     background-color: var(--neutral-rose-white);
     border-radius: 1rem;
+    line-height: 1.75rem;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.ingredients, .instructions, .nutrition{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 ul,
 ol {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+
     margin-left: 1rem;
+}
+
+li{
+    padding-left: 1rem;
 }
 
 .preparation ul li span,
@@ -121,17 +144,52 @@ li::marker {
     }
 }
 
-.break-line {
+@media (max-width: 43.74em) {
+    .wrapper{
+        padding-inline: 1.90rem;
+    }
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.spacer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.break-line, td, th{
     border-bottom: 1px solid var(--neutral-light-grey);
 }
 
-.wrapper {
-    padding-inline: 2rem;
+td{
+    padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+td:last-child{
+    font-weight: var(--font-weight-700);
+    color: var(--primary-nutmeg);
+}
+
+section{
+    padding-bottom: 2rem;
 }
 
 .attribution {
     font-size: 11px;
     text-align: center;
+    padding: 1rem;
 }
 
 .attribution a {
